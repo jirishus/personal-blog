@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brandon Gagon | Personal Blog</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <style>
     html {
@@ -20,9 +21,9 @@
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
+          <a href="https://www.linkedin.com/in/brandon-gagon-8ba73b65/" target="_blank" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            BG
+            <i class="fa-brands fa-linkedin"></i> BG
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -34,10 +35,18 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">          
-          <a href="#projects" class="text-sm/6 font-semibold text-gray-900">Projects</a>
-          <a href="#about" class="text-sm/6 font-semibold text-gray-900">About</a>
-          <a href="#skills" class="text-sm/6 font-semibold text-gray-900">Skills</a>
-          <a href="#contact" class="text-sm/6 font-semibold text-gray-900">Contact</a>
+          <a href="#projects" class="text-sm/6 font-semibold text-gray-900">
+            <i class="fa fa-diagram-project"></i> Projects
+          </a>
+          <a href="#about" class="text-sm/6 font-semibold text-gray-900">
+            <i class="fa fa-book-open"></i> About
+          </a>
+          <a href="#skills" class="text-sm/6 font-semibold text-gray-900">
+            <i class="fa fa-laptop-code"></i> Skills
+          </a>
+          <a href="#contact" class="text-sm/6 font-semibold text-gray-900">
+            <i class="fa fa-address-card"></i> Contact
+          </a>
         </div>
         <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -63,10 +72,10 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <a href="#projects" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Projects</a>
-                <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About</a>
-                <a href="#skills" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Skills</a>
-                <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>                
+                <a href="#projects" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><i class="fa fa-diagram-project"></i> Projects</a>
+                <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><i class="fa fa-book-open"></i> About</a>
+                <a href="#skills" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><i class="fa fa-laptop-code"></i> Skills</a>
+                <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><i class="fa fa-address-card"></i> Contact</a>                
               </div>
               <!-- <div class="py-6">
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
@@ -91,7 +100,9 @@
     </div>
 
     <section class="container mx-auto">
-      <h2 class="text-center bg-gray-50 py-12 border" id="projects">Projects</h2>
+      <h2 class="text-center bg-gray-50 py-12 border" id="projects">
+        <i class="fa fa-diagram-project fa-2xl"></i> Projects
+      </h2>
       <div class="grid lg:grid-cols-3 gap-4 my-20">
 
         <div class="text-center hover:bg-gray-200">
