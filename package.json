@@ -2,7 +2,7 @@
   "name": "personal-blog",
   "version": "1.0.0",
   "description": "Personal Blog Site",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
@@ -14,5 +14,9 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "tailwindcss": "^4.1.11"
   }
 }
