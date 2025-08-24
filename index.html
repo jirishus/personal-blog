@@ -508,8 +508,58 @@
   </div>
 </div>
   
+  <!-- Load main.js as module -->
   <script type="module" src="scripts/main.js"></script>
-  <script src="scripts/typing-effect.js"></script>
+  
+  <!-- Inline typing effect script -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const roleElement = document.getElementById('dynamic-role');
+    if (!roleElement) return;
+
+    const roles = [
+      'Software Engineer',
+      'DevOps Specialist',
+      'Cloud Architect',
+      'Full-Stack Developer',
+      'Problem Solver'
+    ];
+    
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeoutId = null;
+
+    function type() {
+      const currentRole = roles[roleIndex];
+      
+      if (isDeleting) {
+        roleElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        roleElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        timeoutId = setTimeout(() => {
+          isDeleting = true;
+          type();
+        }, 2000);
+        return;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+
+      const typeSpeed = isDeleting ? 50 : 100;
+      timeoutId = setTimeout(type, typeSpeed);
+    }
+
+    // Start the effect
+    setTimeout(type, 1000);
+  });
+  </script>
 </body>
 
 </html>
