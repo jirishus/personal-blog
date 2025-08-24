@@ -11,7 +11,7 @@
 
 <body>
 
-  <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]">
+  <div class="bg-white">
 
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -81,45 +81,75 @@
       </div>
     </header>
           
-    <div class="relative isolate px-6 pt-14 lg:px-8">      
-      <div class="mx-auto max-w-2xl py-16 sm:py-28 lg:py-36">        
+    <!-- Hero Section -->
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="text-center">
-          <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Hi, I'm Brandon</h1>
-          <!-- <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Full-Stack Software Engineer</p> -->
-          <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-            <span class="text-3xl text-transparent bg-clip-text bg-gradient-to-tr to-cyan-500 from-blue-600 font-bold"> Full-Stack Software Engineer </span>
-            <br /> I enjoy building things, tinkering and exploring AI/ML tools</p>
-            <aside class="pt-5">
-              <a href="https://www.linkedin.com/in/brandon-gagon-8ba73b65/" target="_blank" class="hover:text-blue-600">
-                <i class="fa-brands fa-linkedin fa-2xl pr-2"></i>
-              </a>
-              <a href="https://github.com/jirishus" target="_blank" class="hover:text-blue-600">
-                <i class="fa-brands fa-github fa-2xl pr-2"></i>
-              </a>
-              <a href="mailto:brandongagon@gmail.com" class="hover:text-blue-600">
-                <i class="fa fa-envelope fa-2xl"></i>
-              </a>
-            </aside>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#projects" class="rounded-md bg-gradient-to-tr to-cyan-500 from-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">See My Projects →</a>
-
-            <!-- <a href="blog/index.html" class="rounded-md bg-gradient-to-tr to-cyan-500 from-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Read Blog Articles →</a> -->
-            
+          <!-- Greeting -->
+          <p class="text-lg md:text-xl font-medium text-blue-600 mb-4">Hello, my name is</p>
+          
+          <!-- Name -->
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+            Brandon Gagon
+          </h1>
+          
+          <!-- Title with Typing Effect -->
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-6 min-h-[2.5rem] md:min-h-[3.5rem] flex items-center justify-center">
+            <span id="dynamic-role" class="inline-block"></span>
+            <span class="typing-cursor">|</span>
+          </h2>
+          
+          <style>
+            @keyframes blink {
+              0%, 100% { opacity: 1; }
+              50% { opacity: 0; }
+            }
+            .typing-cursor {
+              display: inline-block;
+              margin-left: 2px;
+              animation: blink 0.7s infinite;
+              color: #3B82F6;
+            }
+          </style>
+          
+          <!-- Short Bio -->
+          <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-10">
+            I build exceptional digital experiences with modern web technologies and scalable architectures.
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <a href="#projects" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition-colors duration-300">
+              View My Work
+            </a>
+            <a href="#contact" class="px-8 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-300">
+              Get In Touch
+            </a>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="flex justify-center space-x-6">
+            <a href="https://www.linkedin.com/in/brandon-gagon-8ba73b65/" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in text-2xl"></i>
+            </a>
+            <a href="https://github.com/jirishus" target="_blank" class="text-gray-500 hover:text-gray-900 transition-colors duration-300" aria-label="GitHub">
+              <i class="fa-brands fa-github text-2xl"></i>
+            </a>
+            <a href="mailto:brandongagon@gmail.com" class="text-gray-500 hover:text-red-500 transition-colors duration-300" aria-label="Email">
+              <i class="fa-regular fa-envelope text-2xl"></i>
+            </a>
           </div>
         </div>
-      </div>      
-    </div>
+      </div>
+    </section>
 
-    <section class="relative isolate px-6 pt-14 lg:px-8" id="projects">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl p-6">
-        <span class="block">
-          Take a look
-          <span class="text-transparent bg-clip-text bg-gradient-to-tr to-cyan-500 from-blue-600">
-            at the side projects <br/>
-          </span>
-          I'm passionate about
-        </span>
-      </h1>
+    <section class="relative py-16" id="projects">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">
+          <i class="fa fa-diagram-project mr-2"></i>
+          Projects I've Built
+        </h2>
+      </div>
     </section>
 
     <section class="container mx-auto">
@@ -149,8 +179,11 @@
     </section>
 
     <section class="container mx-auto">
-      <h2 class="text-center text-2xl py-2 font-bold" id="about">
-        <i class="fa fa-book-open"></i> About
+      <h2 class="text-3xl font-bold text-center mb-2">
+        <i class="fa fa-book-open mr-2"></i>
+        <span class="text-transparent bg-clip-text bg-gradient-to-tr to-cyan-500 from-blue-600">
+          About Me
+        </span>
       </h2>
       <div class="lg:px-20 py-20 sm:px-5 py-5">
         <p class="lg:px-30 px-5">
@@ -162,53 +195,135 @@ For this reason, I continually update and analyze my knowledge of application ar
       </div>
     </section>
 
-    <section class="container mx-auto">
-      <h2 class="text-center text-2xl py-2 font-bold" id="skills">
-        <i class="fa fa-laptop-code"></i> Skills
-      </h2>
-      <div class="lg:px-40 py-20 sm:px-5 py-5">
-        <ul class="text-center">
-          <li>HTML5</li>
-          <li>CSS / TailWind</li>
-          <li>Javascript / Typescript - React - NextJS</li>
-          <li>NodeJS - Express, NestJS</li>          
-          <li>Java - SpringBoot</li>
-          <li>Python - FastAPI, Flask, Django</li>
-          <li>Devops, Cloud, AI</li>
-        </ul>
+    <section class="relative py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16" id="skills">
+          <i class="fa fa-laptop-code mr-2"></i>
+          <span class="text-transparent bg-clip-text bg-gradient-to-tr to-cyan-500 from-blue-600">Skills & Expertise</span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Frontend Skills -->
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fa-solid fa-display"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                HTML5 / CSS3
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                JavaScript / TypeScript
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                React / Next.js
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                Tailwind CSS
+              </li>
+            </ul>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Backend</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                Node.js / Express / NestJS
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                Java / Spring Boot
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                Python / FastAPI / Django
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                RESTful APIs
+              </li>
+            </ul>
+          </div>
+
+          <!-- DevOps & Tools -->
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">DevOps & Tools</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                Docker / Kubernetes
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                AWS / GCP
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                CI/CD Pipelines
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                Git / GitHub Actions
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="container mx-auto">
-      <h2 class="text-center text-2xl py-2 font-bold" id="contact">
-        <i class="fa fa-address-card"></i> Contact
-      </h2>
-      <div class="lg:px-40 py-20 sm:px-5 py-5 text-center">
-        <p>brandongagon@gmail.com</p>
+    <footer class="bg-gradient-to-tr to-cyan-500 from-blue-600 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">
+            <i class="fa fa-address-card mr-2"></i>
+            Get In Touch
+          </h2>
+          <p class="text-xl mb-8 opacity-90">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+          
+          <div class="mb-10">
+            <a href="mailto:brandongagon@gmail.com" class="text-xl font-medium hover:opacity-80 transition-opacity">
+              brandongagon@gmail.com
+            </a>
+          </div>
+          
+          <div class="flex justify-center space-x-6 mb-10">
+            <a href="https://www.linkedin.com/in/brandon-gagon-8ba73b65/" target="_blank" class="text-2xl hover:opacity-80 transition-opacity" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/jirishus" target="_blank" class="text-2xl hover:opacity-80 transition-opacity" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:brandongagon@gmail.com" class="text-2xl hover:opacity-80 transition-opacity" aria-label="Email">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+          
+          <div class="border-t border-white/20 pt-8">
+            <p class="text-sm opacity-80">
+              &copy; 2025 Brandon Gagon. All rights reserved.
+            </p>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- <footer class="py-12 bg-gradient-to-tr to-cyan-500 from-blue-600">
-      <section class="grid grid-cols-2 px-10">
-        <p>item1</p>
-        <p>item2</p>
-        <p>item3</p>
-        <p>item4</p>
-      </section>      
-    </footer> -->
-
-    <footer class="py-12 bg-gradient-to-tr to-cyan-500 from-blue-600">
-      <p class="text-center"><i class="fa fa-copyright"></i> 2025</p>  
     </footer>
-
   </div>
-  </div>
-
-  <!-- <footer class="border py-5 px-5 bottom-0 w-full">
-    <p class="text-center"><i class="fa fa-copyright"></i> 2025</p>    
-  </footer> -->
+</div>
   
   <script type="module" src="scripts/main.js"></script>
+  <script src="scripts/typing-effect.js"></script>
 </body>
 
 </html>
