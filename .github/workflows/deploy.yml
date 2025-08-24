@@ -1,0 +1,106 @@
+# .github/workflows/deploy.yml
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches: [ main ]  # Change to your default branch
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.19.0'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Clean build directory
+      run: rm -rf dist
+
+    - name: Build application
+      run: npm run build
+
+    - name: Build Docker image
+      run: |
+        docker build -t brandongagon:${{ github.sha }} .
+        docker tag brandongagon:${{ github.sha }} brandongagon:latest
+
+    - name: Save Docker image
+      run: docker save brandongagon:latest | gzip > brandongagon.tar.gz
+
+    - name: Deploy to DigitalOcean
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.DO_HOST }}
+        username: ${{ secrets.DO_USERNAME }}
+        key: ${{ secrets.DO_PRIVATE_KEY }}
+        port: 22
+        script: |
+          # Stop and remove existing container
+          docker stop brandongagon || true
+          docker rm brandongagon || true
+          
+          # Remove old image
+          docker rmi brandongagon:latest || true
+
+    - name: Copy Docker image to server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.DO_HOST }}
+        username: ${{ secrets.DO_USERNAME }}
+        key: ${{ secrets.DO_PRIVATE_KEY }}
+        port: 22
+        source: "brandongagon.tar.gz"
+        target: "~/"
+
+    - name: Load and run Docker container
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.DO_HOST }}
+        username: ${{ secrets.DO_USERNAME }}
+        key: ${{ secrets.DO_PRIVATE_KEY }}
+        port: 22
+        script: |
+          # Create app directory in home folder
+          mkdir -p ~/brandongagon
+          cd ~/brandongagon
+          
+          # Move the uploaded tar file to the app directory
+          mv ~/brandongagon.tar.gz ~/brandongagon/
+          
+          # Load Docker image
+          docker load < brandongagon.tar.gz
+          
+          # Stop and remove existing container
+          docker stop brandongagon || true
+          docker rm brandongagon || true
+          
+          # Remove old image  
+          docker rmi brandongagon:old || true
+          
+          # Tag current image as old before loading new one
+          docker tag brandongagon:latest brandongagon:old || true
+          
+          # Run new container
+          docker run -d \
+            --name brandongagon \
+            --restart unless-stopped \
+            -p 3000:80 \
+            brandongagon:latest
+          
+          # Clean up
+          rm brandongagon.tar.gz
+          docker rmi brandongagon:old || true
+          
+          # Verify container is running
+          docker ps | grep brandongagon

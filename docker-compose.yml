@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: brandongagon:local
+    container_name: brandongagon
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"   # host NGINX proxies to this
+    # env_file: .env            # (optional)
+    # environment:              # (optional)
+    #   NODE_ENV: production
