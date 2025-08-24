@@ -85,9 +85,6 @@
     <section class="bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="text-center">
-          <!-- Greeting -->
-          <p class="text-lg md:text-xl font-medium text-blue-600 mb-4">Hello, my name is</p>
-          
           <!-- Name -->
           <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
             Brandon Gagon
@@ -143,55 +140,244 @@
       </div>
     </section>
 
-    <section class="relative py-16" id="projects">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">
-          <i class="fa fa-diagram-project mr-2"></i>
-          Projects I've Built
-        </h2>
+    <section class="py-20 bg-white" id="projects">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800">
+            <i class="fa fa-diagram-project mr-2 text-blue-600"></i>
+            Projects I've Built
+          </h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            A collection of my recent work. Each project represents a unique challenge and solution.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="relative overflow-hidden h-64">
+              <img src="/img/stockmarketapis.png" alt="Stock Market API" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-white text-xl font-bold mb-2">Stock Market API</h3>
+                  <p class="text-gray-200 mb-4">A comprehensive API for real-time and historical market data</p>
+                  <a href="https://www.stockmarketapi.dev/" target="_blank" class="inline-flex items-center text-white border border-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg transition-colors duration-300">
+                    View Project
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Node.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">TypeScript</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">AWS</span>
+              </div>
+              <p class="text-gray-600">High-performance API delivering real-time and historical stock market data with millisecond response times.</p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="relative overflow-hidden h-64">
+              <img src="/img/devcoursehub.png" alt="Dev Course Hub" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-white text-xl font-bold mb-2">Dev Course Hub</h3>
+                  <p class="text-gray-200 mb-4">A curated platform for developer courses and tutorials</p>
+                  <a href="https://www.devcoursehub.com/" target="_blank" class="inline-flex items-center text-white border border-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg transition-colors duration-300">
+                    View Project
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">React</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Next.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">MongoDB</span>
+              </div>
+              <p class="text-gray-600">A comprehensive learning platform connecting developers with high-quality programming courses and resources.</p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="relative overflow-hidden h-64">
+              <img src="/img/marketviz-landing.png" alt="Market Viz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-white text-xl font-bold mb-2">Market Viz</h3>
+                  <p class="text-gray-200 mb-4">Interactive market data visualization platform</p>
+                  <a href="https://www.marketviz.xyz/" target="_blank" class="inline-flex items-center text-white border border-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg transition-colors duration-300">
+                    View Project
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">D3.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">React</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Python</span>
+              </div>
+              <p class="text-gray-600">Advanced data visualization tools for analyzing and understanding complex market trends and patterns.</p>
+            </div>
+          </div>
+
+          <!-- Project 4 - ViewTune -->
+          <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="relative overflow-hidden h-64 bg-gradient-to-br from-purple-500 to-blue-600">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fab fa-youtube text-white text-6xl opacity-30"></i>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-white text-xl font-bold mb-2">ViewTune</h3>
+                  <p class="text-gray-200 mb-4">Essential tools for YouTube creators</p>
+                  <a href="https://www.viewtune.com/" target="_blank" class="inline-flex items-center text-white border border-white hover:bg-white hover:text-purple-600 px-4 py-2 rounded-lg transition-colors duration-300">
+                    Visit ViewTune
+                    <i class="fas fa-external-link-alt ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">React</span>
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Node.js</span>
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">MongoDB</span>
+              </div>
+              <p class="text-gray-600">A comprehensive suite of tools designed to help YouTube creators optimize their content, analyze performance, and grow their channels.</p>
+            </div>
+          </div>
+
+          <!-- Project 5 - VeetCode -->
+          <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <div class="relative overflow-hidden h-64 bg-gradient-to-br from-green-500 to-teal-600">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-code text-white text-6xl opacity-30"></i>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-white text-xl font-bold mb-2">VeetCode</h3>
+                  <p class="text-gray-200 mb-4">Online coding platform for developers</p>
+                  <a href="https://www.veetcode.com/" target="_blank" class="inline-flex items-center text-white border border-white hover:bg-white hover:text-green-600 px-4 py-2 rounded-lg transition-colors duration-300">
+                    Try VeetCode
+                    <i class="fas fa-external-link-alt ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Python</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Django</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Docker</span>
+              </div>
+              <p class="text-gray-600">An interactive coding platform offering challenges and tutorials to help developers enhance their programming skills through practice.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="container mx-auto">
-      <!-- <h2 class="text-center bg-gray-50 py-12 border" id="projects">
-        <i class="fa fa-diagram-project fa-2xl"></i> Projects
-      </h2> -->
-      <div class="grid lg:grid-cols-3 gap-4 my-20">
-
-        <div class="text-center hover:bg-gray-200">
-          <h2>marketviz.io</h2>
-          <a href="https://www.marketviz.io/" target="_blank" class="bg-[url(/img/marketviz-landing.png)] bg-cover bg-no-repeat bg-center block h-80">            
-           </a>
+    <section class="bg-gray-50 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800">
+            <i class="fa fa-book-open mr-2 text-blue-600"></i>
+            About Me
+          </h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
         </div>
-
-        <div class="text-center hover:bg-gray-200">
-          <h2>stockmarketapis.com</h2>
-          <a href="https://www.stockmarketapis.com/" target="_blank" class="bg-[url(/img/stockmarketapis.png)] bg-cover bg-no-repeat bg-center block h-80">            
-           </a>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <p class="text-lg text-gray-600 leading-relaxed">
+              I'm a passionate Full-Stack Software Engineer with a knack for solving complex problems through clean, efficient code. With experience across the entire development stack, I specialize in building scalable web applications that deliver exceptional user experiences.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                    <i class="fas fa-code text-blue-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold text-gray-800">Full-Stack Development</h3>
+                  <p class="text-gray-600">Building responsive and scalable applications from concept to deployment</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                    <i class="fas fa-server text-blue-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold text-gray-800">Cloud & DevOps</h3>
+                  <p class="text-gray-600">Designing and implementing cloud-native solutions with CI/CD pipelines</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                    <i class="fas fa-lightbulb text-blue-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold text-gray-800">Problem Solving</h3>
+                  <p class="text-gray-600">Transforming complex challenges into elegant, maintainable solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            <h3 class="text-xl font-semibold text-gray-800 mb-6">My Technical Journey</h3>
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-medium text-gray-800">Full-Stack Development</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="font-medium text-gray-800">Cloud Architecture</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="font-medium text-gray-800">DevOps & CI/CD</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div class="bg-blue-600 h-2.5 rounded-full" style="width: 88%"></div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="font-medium text-gray-800">System Design</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
+                </div>
+              </div>
+              
+              <div class="pt-4">
+                <p class="text-sm text-gray-500 italic">Always learning and expanding my skillset to stay current with the latest technologies and best practices.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="text-center hover:bg-gray-200">
-          <h2>brandongagon.com</h2>
-          <a href="https://www.brandongagon.com/" target="_blank" class="bg-[url(/img/brandongagon.png)] bg-cover bg-no-repeat bg-center block h-80">            
-           </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-2">
-        <i class="fa fa-book-open mr-2"></i>
-        <span class="text-transparent bg-clip-text bg-gradient-to-tr to-cyan-500 from-blue-600">
-          About Me
-        </span>
-      </h2>
-      <div class="lg:px-20 py-20 sm:px-5 py-5">
-        <p class="lg:px-30 px-5">
-I am a full-stack developer who is passionate about stable software, design patterns, and best practices. Extensive experience with OOP principles, REST architecture and experience working in a monoliths, micro-services, and the migration from one to the other. 
-<br />
-<br />
-For this reason, I continually update and analyze my knowledge of application architecture, security, API creation/integration, fast data access, comprehensive testing and many other subjects.
-        </p>
       </div>
     </section>
 
