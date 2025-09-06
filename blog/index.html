@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <div class="bg-white">
+  <div class="bg-slate-900">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
@@ -20,7 +20,7 @@
           </a>
         </div>
         <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300">
             <span class="sr-only">Open main menu</span>
             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -28,7 +28,7 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">          
-          <a href="../" class="text-sm/6 font-semibold text-gray-900">
+          <a href="../" class="text-sm/6 font-semibold text-gray-300">
             <i class="fa fa-home"></i> Home
           </a>          
         </div>        
@@ -39,20 +39,59 @@
     <div class="relative isolate px-6 pt-14 lg:px-8">      
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">        
         <div class="text-center">
-          <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Recent Articles</h1>          
-          <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">            
+          <h1 class="text-5xl font-semibold tracking-tight text-balance text-slate-100 sm:text-7xl">Recent Articles</h1>          
+          <p class="mt-8 text-lg font-medium text-pretty text-slate-300 sm:text-xl/8">            
             <br /> I enjoy writing about a variety of topics.</p>
 
-            <ul>
-              <li><a href="stackAndHeap.html">Stack And Heap</a></li>
-            </ul>
+            <div class="mt-12 max-w-2xl mx-auto">
+              <div class="bg-slate-700 p-6 border border-slate-600 hover:border-slate-500 transition-colors">
+                <h3 class="text-xl font-bold text-slate-100 mb-3">Stack And Heap: Memory Management Fundamentals</h3>
+                <p class="text-slate-300 mb-4">A comprehensive exploration of how memory is allocated and managed in programming, covering the fundamental differences between stack and heap memory.</p>
+                <a href="stackAndHeap.html" class="inline-flex items-center text-slate-400 hover:text-slate-200 transition-colors font-medium">
+                  Read Article
+                  <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
               
         </div>
       </div>      
     </div>
 
-  <footer class="border py-5 px-5">
-    <p class="text-center"><i class="fa fa-copyright"></i> 2025</p>    
+  <footer class="bg-slate-900 text-slate-100 pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6" id="contact">
+          <i class="fa fa-address-card mr-2 text-slate-400"></i>
+          Get In Touch
+        </h2>
+        <p class="text-xl mb-8 text-slate-300">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+        
+        <div class="mb-10">
+          <a href="mailto:brandongagon@gmail.com" class="text-xl font-medium text-slate-200 hover:text-slate-100 transition-colors">
+            brandongagon@gmail.com
+          </a>
+        </div>
+        
+        <div class="flex justify-center space-x-6 mb-10">
+          <a href="https://www.linkedin.com/in/brandon-gagon-8ba73b65/" target="_blank" class="text-2xl text-slate-400 hover:text-slate-200 transition-colors" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/jirishus" target="_blank" class="text-2xl text-slate-400 hover:text-slate-200 transition-colors" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:brandongagon@gmail.com" class="text-2xl text-slate-400 hover:text-slate-200 transition-colors" aria-label="Email">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+        
+        <div class="border-t border-slate-700 pt-8">
+          <p class="text-sm text-slate-400">
+            &copy; 2025 Brandon Gagon. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="scripts/main.js"></script>
